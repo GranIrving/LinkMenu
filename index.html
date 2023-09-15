@@ -8,7 +8,36 @@
 <style>
     body {
       background-color: #FFFFCC; /* Amarillo pálido */
-      background-image: repeating-linear-gradient(-60deg, transparent, transparent 20px, rgba(0, 0, 0, 0.1) 20px, rgba(0, 0, 0, 0.1) 40px);
+    }
+
+    .hexagon {
+      width: 100px;
+      height: 55px;
+      background-color: #1d4; /* Color de fondo de los hexágonos */
+      position: relative;
+      display: inline-block;
+      margin: 5px;
+    }
+
+    .hexagon:before,
+    .hexagon:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+    }
+
+    .hexagon:before {
+      bottom: 100%;
+      border-bottom: 27.5px solid #1d4; /* Color de fondo de los hexágonos */
+    }
+
+    .hexagon:after {
+      top: 100%;
+      width: 0;
+      border-top: 27.5px solid #1d4; /* Color de fondo de los hexágonos */
     }
 </style>
 </head>
